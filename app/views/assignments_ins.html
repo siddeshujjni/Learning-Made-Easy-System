@@ -1,0 +1,54 @@
+<div>
+	<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Assignments</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Assignments List
+                    <a ui-sref="dashboard.addAssignment">
+                        <button type="button" class="btn btn-primary btn-circle">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </a>
+                </div>
+                <!-- .panel-heading -->
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion">
+
+                        <div class="panel panel-default" ng-repeat="x in assignmentsList">
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="col-lg-8">
+                                        <i class="fa fa-file-text-o fa-fw"></i> <a>{{x.title}}</a> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button type="button" class="btn btn-primary" ng-click="showContent(x.id)" 
+                                        ng-model="assignment_id" ng-value="x.id">
+                                        Edit</button>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button type="button" class="btn btn-primary" ng-click="grade(x.id)"
+                                        ng-model="assignment_id" ng-value="x.id">
+                                        Grade</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- .panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>

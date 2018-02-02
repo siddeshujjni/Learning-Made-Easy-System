@@ -1,0 +1,51 @@
+<div>
+	<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Assignments</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <label>Assignment:</label> {{assTitle}}
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <label>Content: </label>
+                        <div class="panel panel-default">
+                            <p>{{assDesc}}</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <label>Answer: </label>
+                        <div class="panel panel-default">
+                            <textarea class="form-control" rows="3" placeholder="{{answerDetail}}" ng-model="newSubmit"></textarea>
+                        </div>
+                    </div>
+                    <div></div>
+
+                    <div class="col-lg-10"></div>
+                    <div class="col-lg-2">
+                        <a ng-click="Save()" class="btn btn-primary btn-sm" role="button">Save</a>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+
+                    </div>
+                </div>
+                <!-- .panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
