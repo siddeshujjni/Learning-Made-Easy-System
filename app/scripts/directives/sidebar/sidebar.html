@@ -1,0 +1,132 @@
+<div class="navbar-default sidebar" role="navigation">
+
+    <!-- Sidebar functions, chosen a course -->
+    <div class="sidebar-nav navbar-collapse" ng-show="chosen">
+
+        <!-- When the user is admin -->
+        <div class="sidebar-nav navbar-collapse" ng-show="isAdmin">
+            <ul class="nav in" id="side-menu">
+                <!--Dashboard-->
+                <li ui-sref-active="active">
+                    <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <!--People-->
+                <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                    <a href="" ng-click="check(1)"><i class="fa fa-users fa-fw"></i> People<span
+                            class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                        <li ui-sref-active="active">
+                            <a ui-sref="dashboard.students">Students</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="dashboard.instructors">Instructors</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Admin Assign -->
+                <li ui-sref-active="active">
+                    <a ui-sref="dashboard.assign"><i class="fa fa-sitemap fa-fw"></i> Assign</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Not admin-->
+        <div class="sidebar-nav navbar-collapse" ng-hide="isAdmin">
+
+            <!-- Is Instructor-->
+            <div class="sidebar-nav navbar-collapse" ng-show="courseRole">
+                <ul class="nav in" id="side-menu" ng-show="chosen">
+                    <!--Dashboard-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+
+                    <!--Assignments-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.assignments_ins"><i class="fa fa-file-text fa-fw"></i> Assignments</a>
+                    </li>
+
+                    <!--Grades-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.grade_ins"><i class="fa fa-check-square-o fa-fw"></i> Grades</a>
+                    </li>
+
+                    <!--People-->
+                    <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                        <a href="" ng-click="check(1)"><i class="fa fa-users fa-fw"></i> People<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                            <li ui-sref-active="active">
+                                <a ui-sref="dashboard.students">Students</a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="dashboard.instructors">Instructors</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Syllabus-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.syllabus_ins"><i class="fa fa-list-ol fa-fw"></i> Syllabus</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Not Instructor, Is Student -->
+            <div class="sidebar-nav navbar-collapse" ng-hide="courseRole">
+                <ul class="nav in" id="side-menu" ng-show="chosen">
+                    <!--Dashboard-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+
+                    <!--Assignments-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.assignments_stu"><i class="fa fa-file-text fa-fw"></i> Assignments</a>
+                    </li>
+
+                    <!--Grades-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.grades_stu"><i class="fa fa-check-square-o fa-fw"></i> Grades</a>
+                    </li>
+
+                    <!--People-->
+                    <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                        <a href="" ng-click="check(1)"><i class="fa fa-users fa-fw"></i> People<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                            <li ui-sref-active="active">
+                                <a ui-sref="dashboard.students">Students</a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="dashboard.instructors">Instructors</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Syllabus-->
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.syllabus_stu"><i class="fa fa-list-ol fa-fw"></i> Syllabus</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Not chosen, just slogan -->
+    <div class="sidebar-nav navbar-collapse" ng-hide="chosen">
+        <ul class="bav in" id="side-menu">
+            <br>
+            <p>Welcome to the <b>Learning Made Easy</b> system!</p>
+            <p>Team 1 members</p>
+            <p><i class="fa fa-male fa-fw"></i>Qi Han</p>
+            <p><i class="fa fa-male fa-fw"></i>Mengsong Sun</p>
+            <p><i class="fa fa-male fa-fw"></i>Siddesh C Prabhu Dev Ujjni</p>
+            <p><i class="fa fa-male fa-fw"></i>Neelkush Vadalia</p>
+            <p>Copyright 2016 &copy Team 1</p>
+        </ul>
+    </div>
+</div> 
+
+
+
